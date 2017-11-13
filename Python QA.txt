@@ -1,0 +1,46 @@
+>>> 'hello world'[::-1]
+'dlrow olleh'
+
+
+--------------------------
+def reverse(text):
+    rev = ''
+    for i in range(len(text), -1, -1):
+        rev += text[i-1]
+    return rev
+--------------------------------------
+def reverse(string): 
+    end = len(string) - 1 
+    strlist = [i for i in string] 
+    while(begin < end): 
+        temp = strlist[begin] 
+        strlist[begin] = strlist[end] 
+        strlist[end] = temp 
+        begin += 1 
+        end -= 1 
+    return ''.join(strlist)
+print reverse('flash')
+---------------------Palindrome----------------------
+def Palindrome_Number():
+    n = input('Enter Number to check for palindromee')
+    m=n
+    a = 0
+    while(m!=0):
+        a = m % 10 + a * 10
+        m = m / 10
+
+    if( n == a):
+        print('%d is a palindrome number' %n)
+    else:
+        print('%d is not a palindrome number' %n)
+----------------------------------------------------
+num = raw_input("Enter any number: ") 
+rev_num = reversed(num) 
+# check if the string is equal to its reverse 
+if list(num) == list(rev_num): 
+             print("Palindrome number") 
+else: 
+             print("Not Palindrome number")
+-------------------------------------------------------------
+
+
